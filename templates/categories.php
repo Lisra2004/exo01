@@ -32,7 +32,7 @@ include_once "../functions/category_queries.php";
               <th scope="row"><?= $categories[$ii]["id"] ?></th>
               <td><?= $categories[$ii]["category"] ?></td>
               <td><?= $categories[$ii]["description"] ?></td>
-              <td></td>
+              <td><?php //TODO: mettre en place les actions edit et suppr ?></td>
           </tr>
       <?php
       }
