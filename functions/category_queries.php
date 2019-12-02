@@ -39,5 +39,5 @@ if ($_GET["del"]){
     $stmt = mysqli_prepare($db, "DELETE FROM category WHERE id=?");
     mysqli_stmt_bind_param($stmt, 'i', $id);
     mysqli_stmt_execute($stmt);
-    return header("Location: ../");
+    return header("Location: ../index.php?mess=3");
 }
