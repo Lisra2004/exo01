@@ -1,4 +1,6 @@
 <?php
+include_once "../functions/sheet_queries.php";
+include_once "../functions/category_queries.php";
 
 ?>
 
@@ -16,7 +18,35 @@
 <body>
 <?php include_once "./include/navbar.php"; ?>
 <div class="jumbotron">
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">id</th>
+          <th scope="col">Libellé</th>
+          <th scope="col">Description</th>
+          <th scope="col">Catégorie</th>
+          <th scope="col">Action1</th>
+          <th scope="col">Action2</th>
 
+        </tr>
+      </thead>
+      <tbody>
+      <?php
+      for ($ii = 0; $ii < count($sheets); $ii++){
+          ?>
+          <tr>
+              <th scope="row"><?= $sheets[$ii]["id"] ?></th>
+              <td><?= $sheets[$ii]["sheet"] ?></td>
+              <td><?= $sheets[$ii]["description"] ?></td>
+              <td><?= $categories[$sheets[$ii]["category_id"]]["category"] ?></td>
+              <td><?php //TODO: mettre en place les actions edit et suppr ?></td>
+          </tr>
+      <?php
+      }
+      ?>
+      </tbody>
+    </table>
+    <a class="btn btn-primary" href="sheet.php" role="button">Créer une nouvelle fiche</a>
 </div>
 
 </body>

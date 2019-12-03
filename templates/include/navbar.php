@@ -10,7 +10,7 @@
                 <a class="nav-link" href="../templates/categories.php">Catégories</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="../templates/sheet.php">Fiches</a>
+                <a class="nav-link" href="../templates/sheets.php">Fiches</a>
             </li>
         </ul>
     </div>

@@ -1,4 +1,5 @@
 <?php
+include_once "../functions/category_queries.php";
 
 ?>
 
@@ -38,6 +39,17 @@
         <label for="description">Description</label>
         <textarea class="form-control" name="description" id="description" rows="3"></textarea>
       </div>
+        <div class="form-group">
+            <label for="category">Catégories</label>
+            <select class="form-control" id="category" name="category">
+                <?php
+                for ($jj = 0; $jj < count($categories); $jj++) { ?>
+                  <option value="<?= $categories[$jj]['id'] ?>" name="category"><?= $categories[$jj]['category'] ?></option>
+                <?php
+                }
+                ?>
+            </select>
+        </div>
         <input type="submit" name="create" value="ok">
 
     </form>

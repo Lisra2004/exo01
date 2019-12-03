@@ -1,7 +1,11 @@
 <?php
-include "../config/connexion.php";
+include_once "../config/connexion.php";
 
-$db = connectDB();
+if (!function_exists(connectDB())){
+    $db = connectDB();
+
+}
+
 
 //Create
 if ($_POST["create"] == "ok"){
