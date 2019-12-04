@@ -24,7 +24,6 @@ include_once "../functions/category_queries.php";
           <th scope="col">Description</th>
           <th scope="col">Action1</th>
           <th scope="col">Action2</th>
-
         </tr>
       </thead>
       <tbody>
@@ -39,6 +38,12 @@ include_once "../functions/category_queries.php";
                       <button name="edit" value="<?= $categories[$ii]["id"] ?>">Modifier</button>
                   </form>
               </td>
+              <td>
+                  <form action="../functions/category_queries.php" method="get">
+                      <button name="delete" value="<?= $categories[$ii]["id"] ?>">Supprimer</button>
+                  </form>
+              </td>
+
           </tr>
       <?php
       }
