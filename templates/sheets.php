@@ -39,7 +39,19 @@ include_once "../functions/category_queries.php";
               <td><?= $sheets[$ii]["sheet"] ?></td>
               <td><?= $sheets[$ii]["description"] ?></td>
               <td><?= $categories[$sheets[$ii]["category_id"]]["category"] ?></td>
-              <td><?php //TODO: mettre en place les actions edit et suppr ?></td>
+              <td>
+                  <form action="../functions/sheet_queries.php" method="get">
+                      <button name="edit" value="<?= $sheets[$ii]["id"] ?>">Modifier</button>
+                  </form>
+              </td>
+              <td>
+                  <form action="../functions/sheet_queries.php" method="get">
+                      <button name="delete" value="<?= $sheets[$ii]["id"] ?>">Supprimer</button>
+                  </form>
+              </td>
+
+          </tr>
+
           </tr>
       <?php
       }
